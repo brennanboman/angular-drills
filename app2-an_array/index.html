@@ -4,11 +4,15 @@
 	</head>
 	<body ng-controller="arrayController">
 
+		<h2>List of Folks</h2>
+
 		<div ng-repeat="user in users">
-			<span>{{user.name}}</span>
-			<span>{{user.email}}</span>
-			<span>{{user.dateEmployed}}</span>
-			<span>{{user.phone}}</span>
+			<ol>
+				<li>{{user.name}}</li>
+			<li>{{user.email}}</li>
+			<li>{{user.dateEmployed}}</li>
+			<li>{{user.phone}}</li>
+			</ol>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>

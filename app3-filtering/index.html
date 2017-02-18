@@ -1,6 +1,22 @@
-<html>
-	<body>
-		Something
+<html ng-app="filterApp">
+	<body ng-controller="ctrlFilter">
+
+<h2>filter the list if you want</h2>
+
+<input class="form-control" placeholder="Search by Name" ng-model="peopleFilter.name">
+
+
+<div ng-repeat="user in users | filter:peopleFilter.name">
+	<p>{{user.name}}</p>
+
+</div>
+
+<p>{{test}}</p>
+
+
+
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
